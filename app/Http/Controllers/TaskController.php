@@ -30,7 +30,6 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-
             'task' => 'required'
         ]);
 
@@ -39,12 +38,21 @@ class TaskController extends Controller
             'task' => $request->task
         ]);
 
-        return back();
+        return back()->with('status_success', 'Task added Sucesfully !');
     }
 
     public function destroy($id)
     {
         Task::destroy($id);
-        return redirect('tasks');
+        return redirect('tasks')->with('status_success', 'Task deleted Sucesfully !');
+    }
+
+
+    public function complete($id)
+    {
+        $t = Task::find($id);
+        $t->completed = true;
+        $t->save();
+        return back();
     }
 }

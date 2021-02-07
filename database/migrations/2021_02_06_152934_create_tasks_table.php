@@ -20,6 +20,7 @@ class CreateTasksTable extends Migration
             $table->foreignId('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
+            $table->boolean('completed')->default(false);
         });
     }
 
