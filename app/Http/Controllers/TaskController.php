@@ -55,4 +55,27 @@ class TaskController extends Controller
         $t->save();
         return back();
     }
+
+    public function show($id)
+    {
+        $t = Task::find($id);
+
+        return view('layouts.updateTask', [
+            'task' => $t
+        ]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $this->validate($request, [
+            'task' => 'required'
+        ]);
+
+        $t = Task::find($id);
+        $t->task = $request['task'];
+
+        return ($t->save() !== 1) ?
+            redirect('/')->with('status_success', 'Task updated!') :
+            redirect('/tasks/' . $id)->with('status_error', 'Project was not updated!');
+    }
 }

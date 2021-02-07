@@ -47,9 +47,14 @@
                   <input class="btn btn-danger"  style="margin-right:5px" type="submit" value=" ❌ Delete">
                   </form>
 
+                  <form action="{{ route('task.show', $task['id']) }}" method="get">
+                    @csrf
+                    <input class="btn btn-secondary"  style="margin-right:5px" type="submit" value="✏️Update">
+                  </form>
+
                   <form action="{{ route('task.complete', $task['id']) }}" method="POST">
                     @csrf
-                    <input class="btn btn-primary"  style="text-color:white" type="submit" value=" ✅ Complete">
+                    <input class="btn btn-primary"   type="submit" value=" ✅ Complete">
                   </form>
 
                 </td>
