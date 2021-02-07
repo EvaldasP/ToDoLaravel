@@ -27,11 +27,12 @@
 
    
  <div class="container mt-5">
+   <h3 style="color: #3490dc">To Do Tasks !</h3>
     <table class="table table-bordered mb-5">
         <thead>
           <tr>
-            <th scope="col">Task</th>
-            <th scope="col">Action</th>
+            <th style="width: 50%" scope="col">Task</th>
+            <th style="width: 50%" scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -57,9 +58,44 @@
         @endforeach
         </tbody>
       </table>
+    
+    <h3 style="color:#38c172">Completed Tasks !</h3>
+    <table class="table table-bordered mb-5">
+        <thead>
+          <tr>
+            <th style="width: 50%" scope="col">Task</th>
+            <th style="width: 50%" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach ($tasks as $task)
+            @if(!$task->completed == 0)
+                <tr>
+                <td style="font-style:italic"> {{$task->task}} </td>
+                <td style="display:flex">
+  
+                  <form action="{{ route('task.destroy', $task['id']) }}" method="POST">
+                  @method('DELETE') @csrf
+                  <input class="btn btn-danger"  style="margin-right:5px" type="submit" value=" ❌ Delete">
+                  </form>
+                </td>
+                </tr>
+            @endif
+        @endforeach
+        </tbody>
+      </table>
       <div class="d-flex justify-content-center">
         {!! $tasks->links() !!}
     </div>
+ 
+
+
 </div>
+
+
+
+
+
+
 
 @endsection
