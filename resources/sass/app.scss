@@ -1,8 +1,43 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+img {
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    span {
+        color: #38c172;
+    }
+}
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-bottom: 20px;
+        color: #f6993f;
+    }
+    form {
+        align-items: center;
+        width: 50%;
+        input {
+            width: 100%;
+        }
+        label {
+            font-size: 1.3rem;
+        }
+    }
+}

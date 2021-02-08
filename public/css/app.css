@@ -10004,3 +10004,37 @@ h3 {
     border-color: #dee2e6;
   }
 }
+img {
+  margin-right: 10px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.navbar-brand span {
+  color: #38c172;
+}
+
+.updateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.updateForm img {
+  margin-bottom: 20px;
+}
+.updateForm h3 {
+  margin-bottom: 20px;
+  color: #f6993f;
+}
+.updateForm form {
+  align-items: center;
+  width: 50%;
+}
+.updateForm form input {
+  width: 100%;
+}
+.updateForm form label {
+  font-size: 1.3rem;
+}
