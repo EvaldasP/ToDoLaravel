@@ -1,8 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container mt-5">
-
 
     <div class="updateForm">
       <img src="/homework.svg" style="width:100px" alt="">

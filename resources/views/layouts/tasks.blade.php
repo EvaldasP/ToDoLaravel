@@ -1,8 +1,5 @@
 @extends('layouts.app')
-
-
 @section('content')
-    
 
     <div class="container mt-5">
         <form  action="{{route('tasks')}}" method="POST">
@@ -30,8 +27,6 @@
     @endif
     </div>
     
-
-   
  <div class="container mt-5">
    <h3 style="color: #3490dc">To Do Tasks !</h3>
     <table class="table table-bordered mb-5">
@@ -99,15 +94,5 @@
       <div class="d-flex justify-content-center">
         {!! $tasks->links() !!}
     </div>
- 
-
-
 </div>
-
-
-
-
-
-
-
 @endsection
