@@ -19,9 +19,6 @@ class TaskController extends Controller
     {
         $user = Auth::user();
         $tasks = $user->tasks()->paginate(6);
-
-
-
         return view('layouts.tasks', [
             'tasks' => $tasks
         ]);
