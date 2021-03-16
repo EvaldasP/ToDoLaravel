@@ -19,8 +19,7 @@ use App\Http\Controllers\TaskController;
 
 Auth::routes();
 
-//Route::get('/home', [HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [TaskController::class, 'index'])->name('tasks');
 Route::get('/', [TaskController::class, 'index'])->name('tasks');
 Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');
 Route::post('/tasks', [TaskController::class, 'store']);
