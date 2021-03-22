@@ -23,7 +23,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/EvaldasP/ToDoLaravel">
-    <img src="./homework.svg" alt="Logo" width="80" height="80">
+    <img src="public/homework.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">To Do Laravel</h3>
@@ -41,6 +41,7 @@
     <a href="https://github.com/EvaldasP/ToDoLaravel">Request Feature</a>
   </p>
 </p>
+ <img src="public/download.png" alt="Logo" >
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
