@@ -34,7 +34,6 @@
     <a href="https://github.com/EvaldasP/ToDoLaravel"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/EvaldasP/ToDoLaravel">View Demo</a>
     ·
     <a href="https://github.com/EvaldasP/ToDoLaravel">Report Bug</a>
     ·
